@@ -32,9 +32,9 @@ Vagrant.configure("2") do |config|
    # Install git and zsh prerequisites 
    config.vm.provision :shell, path: "./install.sh"
    # Clone Oh My Zsh from the git repoexit
-   # config.vm.provision :shell, privileged: false, path: "./zshconf.sh"
+   config.vm.provision :shell, privileged: false, path: "./zshconf.sh"
    # Change the vagrant user's shell to use zsh
-   # config.vm.provision :shell, inline: "chsh -s /bin/zsh vagrant"
+   config.vm.provision :shell, inline: "chsh -s /bin/zsh vagrant"
  
    ############################################################
 end
